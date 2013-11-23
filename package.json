@@ -4,7 +4,7 @@
   "description": "Seperate repo for maintaining the elasticsearch browser build",
   "main": " ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"tests are specified and run from the elasticsearch/elasticsearch-js project\" && exit 0"
   },
   "keywords": [
     "elasticsearch",
@@ -13,7 +13,11 @@
   "author": "Spencer Alger",
   "license": "Apache 2.0",
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-update-submodules": "~0.2.0"
+    "elasticsearch": "https://spenceralger.com/esjs-tarball"
+  },
+  "dependencies": {},
+  "script": {
+    "build": "cd node_modules/elasticsearch-js && npm install && npm run export_client --outputDir=../../ && cd ../../",
+    "prepublish": "npm run build"
   }
 }
