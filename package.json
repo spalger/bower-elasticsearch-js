@@ -16,8 +16,7 @@
     "elasticsearch": "https://spenceralger.com/esjs-tarball"
   },
   "dependencies": {},
-  "script": {
-    "build": "cd node_modules/elasticsearch-js && npm install && npm run export_client --outputDir=../../ && cd ../../",
-    "prepublish": "npm run build"
+  "scripts": {
+    "generate": "npm install && cd node_modules/elasticsearch-js && npm install && node scripts/export_client --outputDir=../../ && cd ../../"
   }
 }
