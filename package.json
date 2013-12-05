@@ -2,9 +2,11 @@
   "name": "elasticsearch-browser",
   "version": "0.0.1",
   "description": "Seperate repo for maintaining the elasticsearch browser build",
-  "main": " ",
+  "main": "elasticsearch.js",
   "scripts": {
-    "test": "echo \"tests are specified and run from the elasticsearch/elasticsearch-js project\" && exit 0"
+    "test": "echo \"tests are specified and run from the elasticsearch/elasticsearch-js project\" && exit 0",
+    "prep-dev": "npm install && cd node_modules/elasticsearch && npm install",
+    "generate": "npm run prep-dev && node node_modules/elasticsearch/scripts/export_client -o ../../"
   },
   "keywords": [
     "elasticsearch",
@@ -13,11 +15,7 @@
   "author": "Spencer Alger",
   "license": "Apache 2.0",
   "devDependencies": {
-    "elasticsearch": "*"
+    "elasticsearch": "git+ssh://git@github.com:elasticsearch/elasticsearch-js.git"
   },
-  "dependencies": {},
-  "scripts": {
-    "prep-dev": "npm install && cd node_modules/elasticsearch && npm install",
-    "generate": "npm run prep-dev && node node_modules/elasticsearch/scripts/export_client -o ../../"
-  }
+  "dependencies": {}
 }
