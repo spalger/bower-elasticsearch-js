@@ -1,6 +1,6 @@
 {
   "name": "elasticsearch",
-  "version": "0.0.1",
+  "version": "1.3.0",
   "authors": [
     "Spencer Alger <spencer@spenceralger.com>"
   ],
@@ -10,10 +10,5 @@
     "elasticsearch",
     "client"
   ],
-  "license": "Apache 2.0",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components"
-  ]
+  "license": "Apache 2.0"
 }
